@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>American Dream — The Future of Destination Commerce</title>
+  <meta name="description" content="American Dream: 3M sq ft. 55M annual visitors. The world's premier mixed-use destination. Explore retail, sponsorship, and event opportunities." />
+  <meta property="og:title" content="American Dream — Commercial Partnerships" />
+  <meta property="og:description" content="The interactive sales deck for America's most ambitious destination property." />
+  <meta name="theme-color" content="#080808" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/loader.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/modules.css" />
+  <link rel="stylesheet" href="css/chatbot.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     LOADER
+══════════════════════════════════════════ -->
+<div id="loader" class="loader">
+  <div class="loader-corners"></div>
+  <div class="loader-inner">
+    <div class="loader-wordmark">
+      <div class="loader-mark">AD</div>
+      <div class="loader-name">American Dream</div>
+    </div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar-fill"></div>
+    </div>
+    <div class="loader-tagline">East Rutherford, New Jersey</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════ -->
+<nav id="main-nav" class="nav">
+  <div class="nav-logo" data-goto="hero">
+    <span class="nav-logo-mark">AD</span>
+    <span class="nav-logo-sep"></span>
+    <span class="nav-logo-name">
+      American Dream
+      <span>East Rutherford, NJ</span>
+    </span>
+  </div>
+
+  <div class="nav-links">
+    <button class="nav-link" data-goto="why">Why Here</button>
+    <button class="nav-link" data-goto="retail">Retail</button>
+    <button class="nav-link" data-goto="luxury">Luxury</button>
+    <button class="nav-link" data-goto="dining">Dining</button>
+    <button class="nav-link" data-goto="entertainment">Entertainment</button>
+    <button class="nav-link" data-goto="events">Events</button>
+    <button class="nav-cta" data-goto="contact">Partner With Us</button>
+  </div>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="nav-progress"></div>
+</nav>
+
+<!-- Mobile Overlay -->
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay-link" data-goto="why">Why Here</button>
+  <button class="nav-overlay-link" data-goto="retail">Retail</button>
+  <button class="nav-overlay-link" data-goto="luxury">Luxury</button>
+  <button class="nav-overlay-link" data-goto="dining">Dining</button>
+  <button class="nav-overlay-link" data-goto="entertainment">Entertainment</button>
+  <button class="nav-overlay-link" data-goto="events">Events</button>
+  <button class="btn btn-gold nav-overlay-cta" data-goto="contact">Partner With Us</button>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SECTION 1 — HERO
+══════════════════════════════════════════ -->
+<section id="hero" class="hero">
+  <!-- Video / Poster Background -->
+  <div class="hero-media">
+    <!-- Fallback poster (loads immediately) -->
+    <div class="hero-poster"></div>
+    <!-- Video loads on top of poster -->
+    <video
+      class="hero-video"
+      autoplay muted loop playsinline
+      preload="auto"
+      poster="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=1920&q=85"
+    >
+      <!-- Real American Dream footage would go here -->
+      <!-- Fallback: poster image stays visible -->
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <div class="hero-eyebrow">East Rutherford, New Jersey — 8 Minutes from Manhattan</div>
+    <h1 class="hero-title">
+      <span class="hero-title-line">This Is Not</span>
+      <span class="hero-title-line">A <em>Mall.</em></span>
+    </h1>
+    <p class="hero-subtitle">
+      3 million square feet. 55 million annual visitors.<br />
+      Six entertainment anchors. One address that defines<br />
+      the future of destination commerce.
+    </p>
+    <div class="hero-actions">
+      <button class="btn btn-gold" data-goto="why">Explore the Opportunity</button>
+      <button class="btn btn-ghost" data-goto="contact">Request a Presentation</button>
+    </div>
+  </div>
+
+  <!-- Stats Bar -->
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div style="display:flex;align-items:baseline;gap:4px">
+        <span class="hero-stat-number" data-count="3">0</span>
+        <span class="hero-stat-unit">M sq ft</span>
+      </div>
+      <div class="hero-stat-label">Total Property</div>
+    </div>
+    <div class="hero-stat">
+      <div style="display:flex;align-items:baseline;gap:4px">
+        <span class="hero-stat-number" data-count="55">0</span>
+        <span class="hero-stat-unit">M+</span>
+      </div>
+      <div class="hero-stat-label">Annual Visitors</div>
+    </div>
+    <div class="hero-stat">
+      <div style="display:flex;align-items:baseline;gap:4px">
+        <span class="hero-stat-number" data-count="450">0</span>
+        <span class="hero-stat-unit">+</span>
+      </div>
+      <div class="hero-stat-label">Brands & Concepts</div>
+    </div>
+    <div class="hero-stat">
+      <div style="display:flex;align-items:baseline;gap:4px">
+        <span class="hero-stat-number" data-count="20">0</span>
+        <span class="hero-stat-unit">M</span>
+      </div>
+      <div class="hero-stat-label">Metro Population Reach</div>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span class="hero-scroll-label">Scroll</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 2 — WHY THIS PROPERTY
+══════════════════════════════════════════ -->
+<section id="why" class="why">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="tag tag--center" data-reveal="fade">The Opportunity</div>
+      <h2 data-reveal="up">Why American Dream<br /><em>Changes Everything</em></h2>
+    </div>
+
+    <div class="why-grid">
+      <!-- Map Card -->
+      <div data-reveal="left" data-delay="1">
+        <div class="why-map-card">
+          <img
+            src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80"
+            alt="New York Metro Area skyline"
+            loading="lazy"
+          />
+          <div class="why-map-gradient"></div>
+          <div class="why-map-pin">
+            <div class="why-map-pin-dot"></div>
+            <div class="why-map-pin-ring"></div>
+          </div>
+          <div class="why-map-info">
+            <div class="why-map-title">American Dream</div>
+            <div class="why-map-sub">1 American Dream Way, East Rutherford, NJ</div>
+            <div class="why-reach-list">
+              <div class="why-reach-item">
+                <span class="why-reach-val">8 min</span>
+                <span class="why-reach-desc">From Manhattan via NJ Transit rail</span>
+              </div>
+              <div class="why-reach-item">
+                <span class="why-reach-val">20M</span>
+                <span class="why-reach-desc">People within 30-mile radius</span>
+              </div>
+              <div class="why-reach-item">
+                <span class="why-reach-val">26,000</span>
+                <span class="why-reach-desc">On-site parking spaces</span>
+              </div>
+              <div class="why-reach-item">
+                <span class="why-reach-val">#1</span>
+                <span class="why-reach-desc">Most-visited destination in New Jersey</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pillars -->
+      <div class="why-pillars" data-reveal="right" data-delay="2">
+        <div class="why-pillar">
+          <div class="why-pillar-icon">◈</div>
+          <div>
+            <h3>Unrivaled Location</h3>
+            <p>Eight minutes from the world's most valuable media market. Adjacent to MetLife Stadium. Served by direct NJ Transit rail. American Dream sits at the crossroads of the most affluent consumer corridor on earth.</p>
+          </div>
+        </div>
+        <div class="why-pillar">
+          <div class="why-pillar-icon">◈</div>
+          <div>
+            <h3>Mixed-Use at True Scale</h3>
+            <p>Not a mall with a food court. A destination with a theme park, indoor ski slope, water park, performing arts center, 100+ dining concepts, luxury hotel, aquarium, and 450+ brands — all under one roof, open 365 days a year.</p>
+          </div>
+        </div>
+        <div class="why-pillar">
+          <div class="why-pillar-icon">◈</div>
+          <div>
+            <h3>The Audience You Need</h3>
+            <p>Average household income $95K+. 40% international visitors. Year-round 12-month traffic driven by entertainment, not just seasonal shopping peaks. The dwell time here is 3.4 hours — not 45 minutes.</p>
+          </div>
+        </div>
+        <div class="why-pillar">
+          <div class="why-pillar-icon">◈</div>
+          <div>
+            <h3>A Platform, Not a Venue</h3>
+            <p>American Dream is where global brands launch, sponsors activate, and events become cultural moments. Your presence here is a statement that reaches 55 million people annually.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demographics Strip -->
+    <div class="demo-strip" data-reveal="up" data-delay="2">
+      <div class="demo-item">
+        <div class="demo-ring" data-pct="72">
+          <svg viewBox="0 0 88 88" aria-hidden="true">
+            <circle cx="44" cy="44" r="36" class="ring-bg" fill="none" stroke-width="3"/>
+            <circle cx="44" cy="44" r="36" class="ring-fill" fill="none" stroke-width="3" stroke-linecap="round" stroke-dasharray="226" stroke-dashoffset="226"/>
+          </svg>
+          <div class="demo-val">72%</div>
+        </div>
+        <div class="demo-label">Age 18–54 core demographic</div>
+      </div>
+      <div class="demo-item">
+        <div class="demo-ring" data-pct="65">
+          <svg viewBox="0 0 88 88" aria-hidden="true">
+            <circle cx="44" cy="44" r="36" class="ring-bg" fill="none" stroke-width="3"/>
+            <circle cx="44" cy="44" r="36" class="ring-fill" fill="none" stroke-width="3" stroke-linecap="round" stroke-dasharray="226" stroke-dashoffset="226"/>
+          </svg>
+          <div class="demo-val">65%</div>
+        </div>
+        <div class="demo-label">Household income $75K+</div>
+      </div>
+      <div class="demo-item">
+        <div class="demo-ring" data-pct="40">
+          <svg viewBox="0 0 88 88" aria-hidden="true">
+            <circle cx="44" cy="44" r="36" class="ring-bg" fill="none" stroke-width="3"/>
+            <circle cx="44" cy="44" r="36" class="ring-fill" fill="none" stroke-width="3" stroke-linecap="round" stroke-dasharray="226" stroke-dashoffset="226"/>
+          </svg>
+          <div class="demo-val">40%</div>
+        </div>
+        <div class="demo-label">International visitors</div>
+      </div>
+      <div class="demo-item">
+        <div class="demo-ring" data-pct="85">
+          <svg viewBox="0 0 88 88" aria-hidden="true">
+            <circle cx="44" cy="44" r="36" class="ring-bg" fill="none" stroke-width="3"/>
+            <circle cx="44" cy="44" r="36" class="ring-fill" fill="none" stroke-width="3" stroke-linecap="round" stroke-dasharray="226" stroke-dashoffset="226"/>
+          </svg>
+          <div class="demo-val">85%</div>
+        </div>
+        <div class="demo-label">Repeat visitors per year</div>
+      </div>
+      <div class="demo-item">
+        <div class="demo-ring" data-pct="58">
+          <svg viewBox="0 0 88 88" aria-hidden="true">
+            <circle cx="44" cy="44" r="36" class="ring-bg" fill="none" stroke-width="3"/>
+            <circle cx="44" cy="44" r="36" class="ring-fill" fill="none" stroke-width="3" stroke-linecap="round" stroke-dasharray="226" stroke-dashoffset="226"/>
+          </svg>
+          <div class="demo-val">58%</div>
+        </div>
+        <div class="demo-label">Female primary shoppers</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 3 — RETAIL
+══════════════════════════════════════════ -->
+<section id="retail" class="retail">
+  <div class="container">
+
+    <div class="section-header section-header--center">
+      <div class="tag tag--center" data-reveal="fade">Retail</div>
+      <h2 data-reveal="up">Where Brands<br /><em>Become Landmarks</em></h2>
+      <p data-reveal="up" data-delay="1">1.5 million square feet of retail. 450+ brands across every category and price point. From global flagship mega-stores to curated boutiques — American Dream is where brands take their biggest swing.</p>
+    </div>
+
+    <div class="retail-layout">
+      <!-- Hero Image -->
+      <div class="retail-hero-img parallax-img" data-reveal="left">
+        <img
+          src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1000&q=85"
+          alt="Retail atrium interior"
+          loading="lazy"
+        />
+        <div class="retail-hero-tag">
+          <span>1.5M sq ft</span>
+          <span>Retail Space</span>
+        </div>
+      </div>
+
+      <!-- Category Cards -->
+      <div class="retail-cats" data-reveal="right" data-delay="1">
+        <div class="retail-cat">
+          <div class="retail-cat-img">
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=300&q=80" alt="Fashion retail" loading="lazy" />
+          </div>
+          <div class="retail-cat-body">
+            <h3>Fashion & Apparel</h3>
+            <p>150+ fashion brands. Anchored by Zara, H&M, and Uniqlo flagships. Street-level visibility and high-dwell positioning in dedicated fashion corridors.</p>
+            <div class="retail-cat-pill">150+ brands</div>
+          </div>
+        </div>
+        <div class="retail-cat">
+          <div class="retail-cat-img">
+            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=300&q=80" alt="Athletic footwear" loading="lazy" />
+          </div>
+          <div class="retail-cat-body">
+            <h3>Sports & Active</h3>
+            <p>Nike, Adidas, and 30+ athletic brands positioned adjacent to Big SNOW and DreamWorks Water Park — contextual commerce at its finest.</p>
+            <div class="retail-cat-pill">30+ brands</div>
+          </div>
+        </div>
+        <div class="retail-cat">
+          <div class="retail-cat-img">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&q=80" alt="Home goods" loading="lazy" />
+          </div>
+          <div class="retail-cat-body">
+            <h3>Home & Lifestyle</h3>
+            <p>Emerging and established lifestyle brands find a home among a demographic that averages 3.4 hours per visit. The dwell time no standalone location can offer.</p>
+            <div class="retail-cat-pill">$3.4B annual visitor spend</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leasing Grid -->
+    <div class="leasing-grid" data-reveal="up" data-delay="1">
+      <div class="lease-card card-lift">
+        <div class="lease-card-icon">⬡</div>
+        <h4>Flagship Store</h4>
+        <p>10,000–80,000 sq ft. Maximum brand exposure. Anchor-level visibility with 15,000+ daily adjacency traffic.</p>
+        <button class="btn btn-outline btn-sm" data-modal="flagship">Learn More</button>
+      </div>
+      <div class="lease-card card-lift">
+        <div class="lease-card-icon">⬡</div>
+        <h4>Boutique & Mid-Tier</h4>
+        <p>1,500–10,000 sq ft. Curated placement in category-specific corridors with precision demographic targeting.</p>
+        <button class="btn btn-outline btn-sm" data-modal="boutique">Learn More</button>
+      </div>
+      <div class="lease-card lease-card--featured card-lift">
+        <div class="lease-card-badge">Most Flexible</div>
+        <div class="lease-card-icon">⬡</div>
+        <h4>Pop-Up & Activation</h4>
+        <p>7-day minimum. Test the market, launch a product, or run a campaign — before committing to permanent space.</p>
+        <button class="btn btn-gold btn-sm" data-modal="popup">Learn More</button>
+      </div>
+      <div class="lease-card card-lift">
+        <div class="lease-card-icon">⬡</div>
+        <h4>Food & Beverage</h4>
+        <p>From QSR to celebrity-chef concepts. 8M+ dining visits annually create the highest F&B velocity in New Jersey.</p>
+        <button class="btn btn-outline btn-sm" data-modal="fnb">Learn More</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 4 — LUXURY
+══════════════════════════════════════════ -->
+<section id="luxury" class="luxury">
+  <div class="luxury-bg">
+    <img
+      src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1920&q=85"
+      alt="Luxury retail environment"
+      loading="lazy"
+    />
+    <div class="luxury-bg-gradient"></div>
+  </div>
+
+  <div class="container">
+    <div class="luxury-inner">
+      <!-- Content -->
+      <div class="luxury-content">
+        <div class="tag tag--light" data-reveal="fade">The Luxury Wing</div>
+        <h2 data-reveal="up" data-delay="1" style="color:var(--c-white)">
+          A Different<br /><em>Altitude Entirely</em>
+        </h2>
+        <div class="divider"></div>
+        <p class="luxury-desc" data-reveal="up" data-delay="2">
+          American Dream's luxury wing represents a new format in American retail — a climate-controlled, gallery-like environment where prestige brands command the positioning they deserve. No compromise. No adjacency conflicts. A visitor profile that concentrates the highest household incomes in the Northeast under one roof.
+        </p>
+        <div class="luxury-kpis" data-reveal="up" data-delay="3">
+          <div class="luxury-kpi">
+            <span class="luxury-kpi-val">$150K+</span>
+            <span class="luxury-kpi-label">Avg shopper HHI</span>
+          </div>
+          <div class="luxury-kpi">
+            <span class="luxury-kpi-val">2.1×</span>
+            <span class="luxury-kpi-label">Dwell vs standard</span>
+          </div>
+          <div class="luxury-kpi">
+            <span class="luxury-kpi-val">60%</span>
+            <span class="luxury-kpi-label">Intl concentration</span>
+          </div>
+        </div>
+        <button class="btn btn-gold" data-modal="luxury" data-reveal="up" data-delay="4">Enquire About Luxury Placement</button>
+      </div>
+
+      <!-- Brand List -->
+      <div class="luxury-brands" data-reveal="right" data-delay="2">
+        <div class="luxury-brand-item">Louis Vuitton</div>
+        <div class="luxury-brand-item">Gucci</div>
+        <div class="luxury-brand-item">Hermès</div>
+        <div class="luxury-brand-item">Burberry</div>
+        <div class="luxury-brand-item">Tiffany &amp; Co.</div>
+        <div class="luxury-brand-item">Saint Laurent</div>
+        <div class="luxury-brand-item">Balenciaga</div>
+        <div class="luxury-brand-item">Prada</div>
+        <div class="luxury-brand-item">Valentino</div>
+        <div class="luxury-brand-item">Bottega Veneta</div>
+        <p class="luxury-brands-note">Selected current and prospective luxury partners</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 5 — DINING & LIFESTYLE
+══════════════════════════════════════════ -->
+<section id="dining" class="dining">
+  <div class="container">
+
+    <div class="section-header section-header--center">
+      <div class="tag tag--center" data-reveal="fade">Dining &amp; Lifestyle</div>
+      <h2 data-reveal="up">Food Is the<br /><em>New Flagship</em></h2>
+      <p data-reveal="up" data-delay="1">100+ dining concepts. 8 million meals served annually. Three distinct food hall environments. American Dream's food program isn't an amenity — it's a primary traffic driver that fills every seat on every floor.</p>
+    </div>
+
+    <!-- Reel -->
+    <div class="dining-reel-wrap" data-reveal="up" data-delay="1">
+      <div class="dining-reel-viewport">
+        <div class="dining-reel-track">
+          <div class="dining-card">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Fine dining" loading="lazy" />
+            <div class="dining-card-overlay">
+              <div class="dining-card-tag">Fine Dining</div>
+              <h3>Celebrity Chef Concepts</h3>
+              <p>Full liquor licenses, private dining rooms, and the Manhattan audience without the Manhattan rent.</p>
+            </div>
+          </div>
+          <div class="dining-card">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="International cuisine" loading="lazy" />
+            <div class="dining-card-overlay">
+              <div class="dining-card-tag">International Cuisine</div>
+              <h3>Global Flavors</h3>
+              <p>Authentic international concepts curated to match our 40% international visitor demographic.</p>
+            </div>
+          </div>
+          <div class="dining-card">
+            <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&q=80" alt="Fast casual" loading="lazy" />
+            <div class="dining-card-overlay">
+              <div class="dining-card-tag">Fast Casual</div>
+              <h3>High-Volume QSR</h3>
+              <p>Premium fast casual in dedicated corridors — maximum velocity, maximum visibility.</p>
+            </div>
+          </div>
+          <div class="dining-card">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Coffee and cafes" loading="lazy" />
+            <div class="dining-card-overlay">
+              <div class="dining-card-tag">Café &amp; Bar</div>
+              <h3>Coffee, Cocktails &amp; Culture</h3>
+              <p>Rooftop terraces, indoor bars, and artisan coffee concepts woven through every zone of the property.</p>
+            </div>
+          </div>
+          <div class="dining-card">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Food hall" loading="lazy" />
+            <div class="dining-card-overlay">
+              <div class="dining-card-tag">Food Halls</div>
+              <h3>Three Hall Environments</h3>
+              <p>Each hall carries a distinct design identity and culinary theme — not generic food courts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dining-reel-controls">
+        <button class="reel-btn reel-btn-prev" aria-label="Previous">←</button>
+        <button class="reel-btn reel-btn-next" aria-label="Next">→</button>
+      </div>
+    </div>
+
+    <!-- Dining Stats -->
+    <div class="dining-stats" data-reveal="up" data-delay="2">
+      <div class="dining-stat">
+        <span class="stat-num">100+</span>
+        <span class="stat-label">Dining Concepts</span>
+      </div>
+      <div class="dining-stat">
+        <span class="stat-num">8M</span>
+        <span class="stat-label">Meals Served / Year</span>
+      </div>
+      <div class="dining-stat">
+        <span class="stat-num">3.4h</span>
+        <span class="stat-label">Avg Dwell Time</span>
+      </div>
+      <div class="dining-stat">
+        <span class="stat-num">$42</span>
+        <span class="stat-label">Avg F&amp;B Spend/Visit</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 6 — ENTERTAINMENT
+══════════════════════════════════════════ -->
+<section id="entertainment" class="entertainment">
+  <div class="container">
+
+    <div class="section-header section-header--center">
+      <div class="tag tag--center" data-reveal="fade">Entertainment &amp; Attractions</div>
+      <h2 data-reveal="up">Nothing Else<br /><em>Comes Close</em></h2>
+      <p data-reveal="up" data-delay="1">Six major entertainment anchors under one roof. No other property on earth combines this lineup — and it's precisely what makes American Dream a 365-day destination, immune to seasonal retail cycles.</p>
+    </div>
+
+    <!-- Tab Nav -->
+    <div class="ent-tab-nav" data-reveal="up" data-delay="1">
+      <button class="ent-tab-btn active" data-tab="nickelodeon">Nickelodeon Universe</button>
+      <button class="ent-tab-btn" data-tab="dreamworks">DreamWorks Water Park</button>
+      <button class="ent-tab-btn" data-tab="bigsnow">Big SNOW</button>
+      <button class="ent-tab-btn" data-tab="sealife">SEA LIFE Aquarium</button>
+      <button class="ent-tab-btn" data-tab="golf">Meadowlands Golf</button>
+      <button class="ent-tab-btn" data-tab="arts">Performing Arts</button>
+    </div>
+
+    <!-- Tab Panels -->
+    <div class="ent-panels">
+
+      <div class="ent-panel tab-panel" id="tab-nickelodeon">
+        <div class="ent-panel-img parallax-img">
+          <img src="https://images.unsplash.com/photo-1583161178490-c98fdf069a8a?w=900&q=80" alt="Theme park rides" loading="lazy" />
+        </div>
+        <div class="ent-panel-content">
+          <div class="tag tag--light">Entertainment Anchor</div>
+          <h3>Nickelodeon Universe<sup>®</sup></h3>
+          <div class="ent-panel-size">165,000 sq ft · 35 rides &amp; attractions</div>
+          <p>The world's largest indoor Nickelodeon theme park. A destination that drives multi-day visitation, premium ticket pricing, and the kind of family loyalty that no retail anchor can replicate. Brands positioned in this zone speak to a captive family audience in peak entertainment mode.</p>
+          <div class="ent-kpis">
+            <span class="ent-kpi">3M+ annual riders</span>
+            <span class="ent-kpi">Family 4–14 core demo</span>
+            <span class="ent-kpi">Premium ticket pricing</span>
+            <span class="ent-kpi">Multi-day visitation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ent-panel tab-panel" id="tab-dreamworks">
+        <div class="ent-panel-img parallax-img">
+          <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=900&q=80" alt="Indoor water park" loading="lazy" />
+        </div>
+        <div class="ent-panel-content">
+          <div class="tag tag--light">Entertainment Anchor</div>
+          <h3>DreamWorks Water Park</h3>
+          <div class="ent-panel-size">364 days/year · Largest indoor water park in the US</div>
+          <p>The only year-round, indoor water park of this scale in America. 40+ slides and attractions deliver 100% weather-independent traffic every single day of the year. When it's blizzarding in December or raining in July, 5,000 people are still inside this building.</p>
+          <div class="ent-kpis">
+            <span class="ent-kpi">40+ water attractions</span>
+            <span class="ent-kpi">364 days operational</span>
+            <span class="ent-kpi">Weather-proof traffic</span>
+            <span class="ent-kpi">Hotel package integration</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ent-panel tab-panel" id="tab-bigsnow">
+        <div class="ent-panel-img parallax-img">
+          <img src="https://images.unsplash.com/photo-1519592590752-41e7bdab1ad4?w=900&q=80" alt="Indoor ski slope" loading="lazy" />
+        </div>
+        <div class="ent-panel-content">
+          <div class="tag tag--light">One-of-a-Kind</div>
+          <h3>Big SNOW American Dream</h3>
+          <div class="ent-panel-size">180,000 sq ft · America's only indoor real-snow ski slope</div>
+          <p>Real snow. Real skiing. Every day of the year. The only indoor ski and snow park in the continental United States. An unmatched experiential differentiator for brands in active lifestyle, outdoor gear, or premium leisure — positioned alongside a guest who just paid $85 to ski in July.</p>
+          <div class="ent-kpis">
+            <span class="ent-kpi">Real snow, always</span>
+            <span class="ent-kpi">5 slopes + terrain park</span>
+            <span class="ent-kpi">Year-round operations</span>
+            <span class="ent-kpi">Premium brand partnerships</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ent-panel tab-panel" id="tab-sealife">
+        <div class="ent-panel-img parallax-img">
+          <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&q=80" alt="Aquarium" loading="lazy" />
+        </div>
+        <div class="ent-panel-content">
+          <div class="tag tag--light">Entertainment Anchor</div>
+          <h3>SEA LIFE Aquarium</h3>
+          <div class="ent-panel-size">25,000+ sq ft · 5,000+ marine creatures</div>
+          <p>The family anchor for the youngest visitor segment. SEA LIFE drives consistent weekday traffic through school group visits and educational programming — maintaining foot traffic across all adjacent retail zones throughout the week, not just weekends.</p>
+          <div class="ent-kpis">
+            <span class="ent-kpi">5,000+ creatures</span>
+            <span class="ent-kpi">School group programs</span>
+            <span class="ent-kpi">Year-round operation</span>
+            <span class="ent-kpi">Weekday traffic driver</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ent-panel tab-panel" id="tab-golf">
+        <div class="ent-panel-img parallax-img">
+          <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=900&q=80" alt="Golf entertainment" loading="lazy" />
+        </div>
+        <div class="ent-panel-content">
+          <div class="tag tag--light">Premium Leisure</div>
+          <h3>Meadowlands Golf</h3>
+          <div class="ent-panel-size">Premium · Corporate entertainment flagship</div>
+          <p>A premium golf and social entertainment venue built for corporate activations, brand experiences, and the most affluent leisure demographic in the market. Purpose-designed for the guest who has already spent several hundred dollars and isn't done yet.</p>
+          <div class="ent-kpis">
+            <span class="ent-kpi">Corporate packages</span>
+            <span class="ent-kpi">$100K+ HHI visitors</span>
+            <span class="ent-kpi">Brand event bookings</span>
+            <span class="ent-kpi">Private hire available</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ent-panel tab-panel" id="tab-arts">
+        <div class="ent-panel-img parallax-img">
+          <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=900&q=80" alt="Performing arts venue" loading="lazy" />
+        </div>
+        <div class="ent-panel-content">
+          <div class="tag tag--light">Live Culture</div>
+          <h3>Performing Arts &amp; Events</h3>
+          <div class="ent-panel-size">Multiple venues · Up to 5,000 capacity</div>
+          <p>From intimate brand activations to full-scale concerts and theatrical productions. American Dream's event infrastructure positions the property as a legitimate global platform for live culture — with the media proximity of being 8 minutes from Manhattan.</p>
+          <div class="ent-kpis">
+            <span class="ent-kpi">Up to 5,000 seats</span>
+            <span class="ent-kpi">365 event days/year</span>
+            <span class="ent-kpi">Full production support</span>
+            <span class="ent-kpi">NYC media adjacency</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 7 — EVENTS & PLATFORM
+══════════════════════════════════════════ -->
+<section id="events" class="events">
+  <div class="events-video-bg">
+    <video
+      muted loop playsinline
+      preload="none"
+      data-autoplay-scroll
+      poster="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80"
+    >
+      <!-- Scroll-triggered autoplay -->
+    </video>
+    <div class="events-video-overlay"></div>
+  </div>
+
+  <div class="events-inner">
+    <div class="container">
+
+      <div class="events-top">
+        <div class="events-content">
+          <div class="section-header">
+            <div class="tag tag--light" data-reveal="fade">Events &amp; Programming</div>
+            <h2 data-reveal="up" data-delay="1" style="color:var(--c-white)">
+              A Global Stage<br /><em>for What's Next</em>
+            </h2>
+          </div>
+          <p data-reveal="up" data-delay="2">
+            500+ events annually — from stadium-scale concerts to intimate brand activations. American Dream's event infrastructure transforms a retail visit into a cultural moment, and a brand partnership into a movement. You're not buying a media placement. You're buying a stage 8 minutes from the most important media market on earth.
+          </p>
+        </div>
+
+        <div class="event-types" data-reveal="right" data-delay="2">
+          <div class="event-type-card">
+            <span class="event-icon">♪</span>
+            <h4>Live Music &amp; Concerts</h4>
+            <p>Multiple indoor venues. Up to 5,000 capacity. Professional rigging, full production support.</p>
+            <button class="btn btn-outline btn-sm" style="margin-top:var(--sp-16)" data-modal="event-concerts">Book a Concert</button>
+          </div>
+          <div class="event-type-card">
+            <span class="event-icon">◎</span>
+            <h4>Brand Activations</h4>
+            <p>55M annual impressions. Turnkey activation environments across all property zones.</p>
+            <button class="btn btn-outline btn-sm" style="margin-top:var(--sp-16)" data-modal="sponsor-premier">Activation Info</button>
+          </div>
+          <div class="event-type-card">
+            <span class="event-icon">⬦</span>
+            <h4>Product Launches</h4>
+            <p>Newsworthy launches in a newsworthy setting. 8 minutes from every major media outlet.</p>
+            <button class="btn btn-outline btn-sm" style="margin-top:var(--sp-16)" data-modal="event-corporate">Plan a Launch</button>
+          </div>
+          <div class="event-type-card">
+            <span class="event-icon">⊞</span>
+            <h4>Conventions &amp; Expos</h4>
+            <p>500,000+ sq ft of configurable space. Convention-center infrastructure with a destination draw.</p>
+            <button class="btn btn-outline btn-sm" style="margin-top:var(--sp-16)" data-modal="event-convention">Book Expo Space</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sponsorship Module -->
+      <div class="sponsor-module" data-reveal="up" data-delay="2">
+        <div class="sponsor-module-header">
+          <div class="tag">Sponsorship &amp; Partnership</div>
+          <h3>Build Equity in America's<br /><em>Most Iconic New Destination</em></h3>
+          <p>Our partnership tiers are designed for brands that want more than a logo placement. Three levels of integration — from founding-level category exclusivity to flexible brand partnerships.</p>
+        </div>
+
+        <div class="sponsor-tiers">
+          <div class="sponsor-tier card-lift">
+            <div class="sponsor-tier-name">Founding Partner</div>
+            <ul>
+              <li>Category exclusivity across all property zones</li>
+              <li>Naming rights opportunities for venues &amp; zones</li>
+              <li>Co-branded programming rights (unlimited events)</li>
+              <li>Permanent digital integration on all screens</li>
+              <li>VIP hospitality suite access</li>
+              <li>Multi-year exclusivity</li>
+            </ul>
+            <button class="btn btn-outline btn-sm" data-modal="sponsor-founding">Learn More</button>
+          </div>
+
+          <div class="sponsor-tier sponsor-tier--center card-lift">
+            <div class="sponsor-tier-badge">Most Popular</div>
+            <div class="sponsor-tier-name">Premier Partner</div>
+            <ul>
+              <li>Event naming rights (up to 12 events/year)</li>
+              <li>Dedicated 2,000 sq ft activation zone</li>
+              <li>Full property digital screen network</li>
+              <li>Monthly co-produced social content</li>
+              <li>Annual event exclusives</li>
+              <li>2–5 year terms</li>
+            </ul>
+            <button class="btn btn-gold btn-sm" data-modal="sponsor-premier">Learn More</button>
+          </div>
+
+          <div class="sponsor-tier card-lift">
+            <div class="sponsor-tier-name">Brand Partner</div>
+            <ul>
+              <li>Pop-up activation spaces</li>
+              <li>Event participation rights</li>
+              <li>Seasonal campaign integration</li>
+              <li>Digital integration (seasonal)</li>
+              <li>Flexible 1-year term</li>
+              <li>Upgradeable to Premier</li>
+            </ul>
+            <button class="btn btn-outline btn-sm" data-modal="sponsor-brand">Learn More</button>
+          </div>
+        </div>
+
+        <div class="sponsor-audience">
+          <div class="sponsor-aud-stat">
+            <span class="stat-num">55M</span>
+            <span class="stat-label">Annual impressions</span>
+          </div>
+          <div class="sponsor-aud-stat">
+            <span class="stat-num">$3.4B</span>
+            <span class="stat-label">Total visitor spend/yr</span>
+          </div>
+          <div class="sponsor-aud-stat">
+            <span class="stat-num">500+</span>
+            <span class="stat-label">Events annually</span>
+          </div>
+          <div class="sponsor-aud-stat">
+            <span class="stat-num">3.4h</span>
+            <span class="stat-label">Avg dwell per visit</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 8 — CONTACT
+══════════════════════════════════════════ -->
+<section id="contact" class="contact-section">
+  <div class="container">
+
+    <div class="contact-split">
+      <!-- Left -->
+      <div class="contact-left" data-reveal="left">
+        <div class="tag">Let's Build Together</div>
+        <h2>Your Opportunity<br /><em>Starts Here</em></h2>
+        <p>Whether you're evaluating a retail lease, a brand partnership, or an event booking — the next step is a conversation. Our commercial team responds within 24 hours with a customized package tailored to your goals.</p>
+
+        <div class="contact-promises">
+          <div class="contact-promise">
+            <span class="contact-promise-check">✓</span>
+            Response within 24 hours
+          </div>
+          <div class="contact-promise">
+            <span class="contact-promise-check">✓</span>
+            Customized availability report
+          </div>
+          <div class="contact-promise">
+            <span class="contact-promise-check">✓</span>
+            Full demographics &amp; traffic data package
+          </div>
+          <div class="contact-promise">
+            <span class="contact-promise-check">✓</span>
+            Dedicated commercial account manager
+          </div>
+          <div class="contact-promise">
+            <span class="contact-promise-check">✓</span>
+            Site visit coordination available
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div data-reveal="right" data-delay="1">
+        <div class="contact-form-wrap">
+          <h3>Request Information</h3>
+
+          <div class="intent-tabs">
+            <button class="intent-tab active" data-intent="leasing">Retail Leasing</button>
+            <button class="intent-tab" data-intent="sponsorship">Sponsorship</button>
+            <button class="intent-tab" data-intent="events">Event Booking</button>
+          </div>
+
+          <div class="form-fields">
+            <div class="field-row">
+              <input type="text" id="cf-name" class="contact-input" placeholder="Full Name" autocomplete="name" />
+              <input type="text" id="cf-company" class="contact-input" placeholder="Company / Brand" autocomplete="organization" />
+            </div>
+            <input type="email" id="cf-email" class="contact-input" placeholder="Business Email" autocomplete="email" />
+            <input type="tel" id="cf-phone" class="contact-input" placeholder="Phone (optional)" autocomplete="tel" />
+            <textarea
+              id="cf-message"
+              class="contact-input contact-textarea"
+              rows="4"
+              placeholder="Tell us about your brand, preferred location type, and approximate size requirements..."
+            ></textarea>
+            <button class="btn btn-gold btn-full" id="contact-submit">Submit Inquiry</button>
+            <div id="contact-confirm" class="contact-confirm">
+              <span>✓</span>
+              Thank you. A member of our commercial team will be in touch within 24 hours.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-mark">AD</div>
+        <p>
+          American Dream<br />
+          1 American Dream Way<br />
+          East Rutherford, NJ 07073<br /><br />
+          Commercial Leasing &amp; Partnerships
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Opportunities</h5>
+        <button class="footer-link" data-goto="retail">Flagship Retail</button>
+        <button class="footer-link" data-goto="retail">Boutique Spaces</button>
+        <button class="footer-link" data-goto="retail">Pop-Up &amp; Activation</button>
+        <button class="footer-link" data-goto="luxury">Luxury Wing</button>
+        <button class="footer-link" data-goto="dining">F&amp;B Concepts</button>
+      </div>
+
+      <div class="footer-col">
+        <h5>Partners</h5>
+        <button class="footer-link" data-goto="events">Sponsorships</button>
+        <button class="footer-link" data-goto="events">Brand Activations</button>
+        <button class="footer-link" data-goto="events">Event Bookings</button>
+        <button class="footer-link" data-goto="events">Conventions</button>
+      </div>
+
+      <div class="footer-cta">
+        <p>Ready to be part of<br />America's destination?</p>
+        <button class="btn btn-gold" data-goto="contact">Get In Touch</button>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>© 2025 American Dream. All rights reserved.</span>
+      <span>Interactive Sales Deck — Commercial Use Only</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     MODAL
+══════════════════════════════════════════ -->
+<div id="modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true">
+  <div id="modal-box" class="modal-box">
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SCRIPTS (module type = ES modules)
+══════════════════════════════════════════ -->
+<script type="module" src="js/main.js"></script>
+
+<!-- ══════════════════════════════════════════
+     AI CHATBOT — No API key required
+══════════════════════════════════════════ -->
+<script type="module">
+  import { initChatbot } from './js/chatbot.js';
+  initChatbot();
+</script>
+</body>
+</html>
