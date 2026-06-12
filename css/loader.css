@@ -1,0 +1,127 @@
+/* ═══════════════════════════════════════
+   loader.css — Loading Screen
+═══════════════════════════════════════ */
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-loader);
+  background: var(--c-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition:
+    opacity 0.8s var(--ease),
+    visibility 0.8s;
+}
+
+.loader.done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-32);
+}
+
+/* Wordmark */
+.loader-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-8);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: loaderFadeUp 0.7s 0.1s var(--ease-out) forwards;
+}
+
+.loader-mark {
+  font-family: var(--f-display);
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  color: var(--c-gold);
+  line-height: 1;
+  padding-left: 0.5em; /* compensate for letter-spacing */
+}
+
+.loader-name {
+  font-family: var(--f-label);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--c-stone);
+  padding-left: 0.45em;
+}
+
+/* Bar */
+.loader-bar-wrap {
+  width: 220px;
+  height: 1px;
+  background: var(--c-mid);
+  overflow: hidden;
+  opacity: 0;
+  animation: loaderFadeUp 0.5s 0.4s var(--ease-out) forwards;
+}
+
+.loader-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--c-gold-deep), var(--c-gold), var(--c-gold-light));
+  width: 0%;
+  animation: loaderBar 2s 0.5s var(--ease-out) forwards;
+}
+
+/* Tagline */
+.loader-tagline {
+  font-family: var(--f-label);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  opacity: 0;
+  animation: loaderFadeUp 0.5s 0.8s var(--ease-out) forwards;
+}
+
+/* Corners */
+.loader-corners {
+  position: absolute;
+  inset: 40px;
+  pointer-events: none;
+}
+
+.loader-corners::before,
+.loader-corners::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: var(--c-mid);
+  border-style: solid;
+  opacity: 0;
+  animation: loaderFadeUp 0.6s 0.2s var(--ease-out) forwards;
+}
+
+.loader-corners::before {
+  top: 0; left: 0;
+  border-width: 1px 0 0 1px;
+}
+
+.loader-corners::after {
+  bottom: 0; right: 0;
+  border-width: 0 1px 1px 0;
+}
+
+@keyframes loaderFadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes loaderBar {
+  to { width: 100%; }
+}

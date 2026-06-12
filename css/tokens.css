@@ -1,0 +1,91 @@
+/* ═══════════════════════════════════════
+   tokens.css — Design System Foundation
+   American Dream Interactive Sales Deck
+═══════════════════════════════════════ */
+
+:root {
+  /* ── Color Palette ── */
+  --c-black:        #080808;
+  --c-void:         #0d0c0b;
+  --c-dark:         #141210;
+  --c-charcoal:     #1c1a18;
+  --c-mid:          #2a2724;
+  --c-muted:        #4a4642;
+  --c-stone:        #7a7470;
+  --c-smoke:        #a8a4a0;
+  --c-cream:        #ede9e3;
+  --c-white:        #f8f6f2;
+
+  /* Gold system */
+  --c-gold-deep:    #7a5c2e;
+  --c-gold:         #c9a96e;
+  --c-gold-mid:     #d4b87a;
+  --c-gold-light:   #e8d4a0;
+  --c-gold-pale:    #f5ecd4;
+
+  /* Accent */
+  --c-accent:       #c8372d;
+  --c-accent-cool:  #2d6a9f;
+
+  /* ── Typography ── */
+  --f-display:  'Cormorant Garamond', 'Didot', Georgia, serif;
+  --f-body:     'Barlow', system-ui, -apple-system, sans-serif;
+  --f-label:    'Barlow Condensed', system-ui, sans-serif;
+
+  /* ── Type Scale ── */
+  --t-hero:    clamp(3.5rem, 9vw, 9rem);
+  --t-h1:      clamp(3rem, 7vw, 7rem);
+  --t-h2:      clamp(2.2rem, 4.5vw, 5rem);
+  --t-h3:      clamp(1.5rem, 2.5vw, 2.2rem);
+  --t-h4:      clamp(1rem, 1.5vw, 1.3rem);
+  --t-body:    clamp(0.9rem, 1.1vw, 1.05rem);
+  --t-small:   clamp(0.75rem, 0.9vw, 0.85rem);
+  --t-label:   clamp(0.65rem, 0.8vw, 0.75rem);
+
+  /* ── Spacing ── */
+  --sp-2:    2px;
+  --sp-4:    4px;
+  --sp-8:    8px;
+  --sp-12:   12px;
+  --sp-16:   16px;
+  --sp-24:   24px;
+  --sp-32:   32px;
+  --sp-48:   48px;
+  --sp-64:   64px;
+  --sp-96:   96px;
+  --sp-128:  128px;
+  --sp-160:  160px;
+
+  /* ── Layout ── */
+  --max-w:      1360px;
+  --side-pad:   clamp(20px, 5vw, 80px);
+  --section-py: clamp(80px, 10vw, 160px);
+
+  /* ── Motion ── */
+  --ease:        cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:    180ms;
+  --dur-mid:     420ms;
+  --dur-slow:    800ms;
+  --dur-crawl:   1400ms;
+
+  /* ── Borders / Radius ── */
+  --border:      1px solid var(--c-mid);
+  --border-gold: 1px solid rgba(201,169,110,0.3);
+  --radius-sm:   2px;
+  --radius:      4px;
+
+  /* ── Shadows ── */
+  --shadow-sm:  0 2px 12px rgba(0,0,0,0.4);
+  --shadow-md:  0 8px 40px rgba(0,0,0,0.6);
+  --shadow-lg:  0 24px 80px rgba(0,0,0,0.8);
+  --glow-gold:  0 0 40px rgba(201,169,110,0.2);
+
+  /* ── Z-index ── */
+  --z-base:    1;
+  --z-overlay: 10;
+  --z-nav:     100;
+  --z-modal:   200;
+  --z-loader:  999;
+}

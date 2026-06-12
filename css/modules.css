@@ -1,0 +1,336 @@
+/* ═══════════════════════════════════════
+   modules.css — Leasing, Sponsorship, Modals
+═══════════════════════════════════════ */
+
+/* ════════════════════════════════
+   LEASING CARDS
+════════════════════════════════ */
+.leasing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-16);
+  margin-top: var(--sp-64);
+}
+
+.lease-card {
+  padding: var(--sp-32) var(--sp-24);
+  border: var(--border);
+  background: var(--c-charcoal);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-16);
+  transition:
+    border-color var(--dur-mid),
+    transform var(--dur-mid) var(--ease-out),
+    background var(--dur-mid);
+  cursor: default;
+}
+
+.lease-card:hover {
+  border-color: rgba(201,169,110,0.4);
+  transform: translateY(-4px);
+  background: var(--c-mid);
+}
+
+.lease-card--featured {
+  border-color: var(--c-gold-deep);
+  background: linear-gradient(
+    135deg,
+    var(--c-charcoal) 0%,
+    rgba(201,169,110,0.06) 100%
+  );
+}
+
+.lease-card--featured:hover {
+  border-color: var(--c-gold);
+}
+
+.lease-card-icon {
+  font-size: 1.4rem;
+  color: var(--c-gold);
+  opacity: 0.7;
+}
+
+.lease-card h4 {
+  font-size: 0.9rem;
+  color: var(--c-cream);
+  letter-spacing: 0.06em;
+}
+
+.lease-card p {
+  font-size: 0.82rem;
+  flex: 1;
+}
+
+.lease-card-badge {
+  font-family: var(--f-label);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-black);
+  background: var(--c-gold);
+  padding: 3px 10px;
+  align-self: flex-start;
+}
+
+/* ════════════════════════════════
+   SPONSORSHIP MODULE
+════════════════════════════════ */
+.sponsor-module {
+  background: var(--c-charcoal);
+  border: var(--border);
+  padding: var(--sp-64);
+  margin-top: var(--sp-64);
+}
+
+.sponsor-module-header {
+  max-width: 600px;
+  margin-bottom: var(--sp-48);
+}
+
+.sponsor-module-header h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  color: var(--c-white);
+  margin-bottom: var(--sp-16);
+}
+
+.sponsor-module-header p { font-size: 0.9rem; }
+
+.sponsor-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-24);
+  margin-bottom: var(--sp-48);
+}
+
+.sponsor-tier {
+  padding: var(--sp-32);
+  border: var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-16);
+  background: var(--c-dark);
+  position: relative;
+  transition:
+    border-color var(--dur-mid),
+    transform var(--dur-mid) var(--ease-out);
+}
+
+.sponsor-tier:hover {
+  border-color: rgba(201,169,110,0.35);
+  transform: translateY(-4px);
+}
+
+.sponsor-tier--center {
+  border-color: var(--c-gold-deep);
+  background: linear-gradient(
+    160deg,
+    rgba(201,169,110,0.07) 0%,
+    var(--c-dark) 100%
+  );
+}
+
+.sponsor-tier-badge {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--c-gold);
+  color: var(--c-black);
+  font-family: var(--f-label);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  white-space: nowrap;
+}
+
+.sponsor-tier-name {
+  font-family: var(--f-label);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-top: var(--sp-8);
+}
+
+.sponsor-tier ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8);
+  flex: 1;
+}
+
+.sponsor-tier li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-8);
+  font-size: 0.8rem;
+  color: var(--c-stone);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.sponsor-tier li::before {
+  content: '—';
+  color: var(--c-gold-deep);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.sponsor-audience {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: var(--border);
+}
+
+.sponsor-aud-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-8);
+  padding: var(--sp-32);
+  text-align: center;
+  border-right: var(--border);
+}
+
+.sponsor-aud-stat:last-child { border-right: none; }
+
+.sponsor-aud-stat .stat-label { font-size: 0.62rem; }
+
+/* ════════════════════════════════
+   MODAL SYSTEM
+════════════════════════════════ */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  background: rgba(0,0,0,0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-32);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--dur-mid) var(--ease),
+    visibility var(--dur-mid);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  background: var(--c-charcoal);
+  border: var(--border);
+  max-width: 660px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: translateY(30px) scale(0.97);
+  transition: transform var(--dur-mid) var(--ease-out);
+}
+
+.modal-backdrop.open .modal-box {
+  transform: none;
+}
+
+.modal-box::-webkit-scrollbar { width: 2px; }
+.modal-box::-webkit-scrollbar-thumb { background: var(--c-gold-deep); }
+
+.modal-header {
+  padding: var(--sp-48) var(--sp-48) 0;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--sp-24);
+  right: var(--sp-24);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-muted);
+  font-size: 1.1rem;
+  transition: color var(--dur-fast);
+}
+
+.modal-close:hover { color: var(--c-white); }
+
+.modal-tag {
+  font-family: var(--f-label);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: var(--sp-12);
+}
+
+.modal-header h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--c-white);
+  margin-bottom: var(--sp-8);
+}
+
+.modal-body {
+  padding: var(--sp-32) var(--sp-48) var(--sp-48);
+}
+
+.modal-body p { margin-bottom: var(--sp-24); }
+
+.modal-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-16);
+  border-top: var(--border);
+  border-bottom: var(--border);
+  padding: var(--sp-24) 0;
+  margin-bottom: var(--sp-32);
+}
+
+.modal-spec { display: flex; flex-direction: column; gap: var(--sp-4); }
+
+.modal-spec-label {
+  font-family: var(--f-label);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+
+.modal-spec-val {
+  font-weight: 400;
+  color: var(--c-cream);
+  font-size: 0.9rem;
+}
+
+/* ════════════════════════════════
+   RESPONSIVE
+════════════════════════════════ */
+@media (max-width: 1024px) {
+  .leasing-grid { grid-template-columns: 1fr 1fr; }
+  .sponsor-tiers { grid-template-columns: 1fr; }
+  .sponsor-audience { grid-template-columns: 1fr 1fr; }
+  .sponsor-aud-stat:nth-child(2) { border-right: none; }
+  .sponsor-module { padding: var(--sp-32); }
+}
+
+@media (max-width: 640px) {
+  .leasing-grid { grid-template-columns: 1fr; }
+  .modal-header, .modal-body { padding-left: var(--sp-24); padding-right: var(--sp-24); }
+  .modal-specs { grid-template-columns: 1fr; }
+}
